@@ -27,32 +27,40 @@ body{
 main{
 display:grid;
 grid-template-columns: 1fr 1fr;
-width:60rem;
+grid-template-rows: 1fr 1fr;
+width:65rem;
+box-shadow: 0 .5rem .5rem .1rem rgba(0,0,0,0.1);
+border-radius: 1rem;
 }
 
 
 .community, .subscription, .about-us{
-    padding: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .subscription, .about-us{
     color:var(--LightGray);
     font-size: 1.5rem;
+    
 }
 .community{
-    display: flex;
-    flex-direction: column;
+    
     background-color: hsl(0, 0%,100%);
     border-radius: 1rem 1rem 0 0;
     grid-column: 2 span;
-    gap: 1.5rem;
+   
     
    }
 
 
  
 h1{
-    font-size: 3rem;
+    font-size: 2.8rem;
     color:var(--Cyan);
         
     
@@ -64,32 +72,56 @@ h1{
 }
 
 .com-des{
-    font-size: 1.5rem;
+
     color:var(--GrayishBlue);
 }
 .subscription{
     background-color: var(--Cyan);
-        
+    border-radius: 0 0 0 1rem;
+            
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .price{
-    
+    display: flex;
 }
 .dollar{
 font-size:3rem;
+font-weight: 700;
 }
+
+.month{
+   align-self: center;
+   padding-left: 1.5rem;
+   color: hsl(179, 62%, 70%);
+           }
+
+ .sign-up{
+    background-color: var(--BrightYellow);
+     height:5rem;
+    font-size:1.5rem;
+    color: hsl(0, 0%,100%);
+    font-weight: 700;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem .5rem .1rem rgba(0,0,0,0.1);
+ }          
 .about-us{
     background-color:hsl(179, 62%, 48%);
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 0 0 1rem 0;
+}
+ul{
+    list-style-type: none;
 }
 
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%); }
 
 @media (max-width:800px){
     main{
@@ -100,8 +132,14 @@ font-size:3rem;
     }
 
     .community{
-        grid-column:1;
-       
+        grid-column:1;     
         
        }
+
+       .subscription{
+        border-radius: 0 0 0 0;
+       }
+.about-us{
+    border-radius: 0 0 1rem 1rem;
+}
 }
