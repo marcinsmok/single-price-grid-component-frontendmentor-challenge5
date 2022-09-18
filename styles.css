@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+--Cyan: hsl(179, 62%, 43%);
+--BrightYellow: hsl(71, 73%, 54%);
+--LightGray: hsl(204, 43%, 93%);
+--GrayishBlue: hsl(218, 22%, 67%);
+font-family: 'Karla', sans-serif;
+font-size: 10px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--LightGray);
+}
+
+main{
+display:grid;
+grid-template-columns: 1fr 1fr;
+width:60rem;
+}
+
+
+.community, .subscription, .about-us{
+    padding: 3rem;
+}
+
+.subscription, .about-us{
+    color:var(--LightGray);
+    font-size: 1.5rem;
+}
+.community{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%,100%);
+    border-radius: 1rem 1rem 0 0;
+    grid-column: 2 span;
+    gap: 1.5rem;
+    
+   }
+
+
+ 
+h1{
+    font-size: 3rem;
+    color:var(--Cyan);
+        
+    
+}
+.guarantee{
+    font-size: 2rem;
+    color:var(--BrightYellow);
+ 
+}
+
+.com-des{
+    font-size: 1.5rem;
+    color:var(--GrayishBlue);
+}
+.subscription{
+    background-color: var(--Cyan);
+        
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.price{
+    
+}
+.dollar{
+font-size:3rem;
+}
+.about-us{
+    background-color:hsl(179, 62%, 48%);
+    border-radius: 0 0 1rem 1rem;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:800px){
+    main{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width:80vw;
+    }
+
+    .community{
+        grid-column:1;
+       
+        
+       }
+}
